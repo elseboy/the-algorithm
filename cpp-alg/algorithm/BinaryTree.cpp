@@ -52,8 +52,26 @@ void InOrder(Node *node) {
 
 // post_order
 void PostOrder(Node *node) {
+  if (node == nullptr)
+    return;
 
+  std::stack<Node *> stack;
+  std::stack<Node *> temp;
+  stack.push(node);
 
+  while (!stack.empty()) {
+    Node *pop = stack.top();
+    stack.pop();
+    temp.push(pop);
+    if (pop->left != nullptr)
+      stack.push(pop->left);
+    if (pop->right != nullptr)
+      stack.push(pop->right);
+  }
+  while (!temp.empty()) {
+    std::cout << temp.top()->data << " ";
+    temp.pop();
+  }
 }
 
 int main() {
@@ -79,6 +97,8 @@ int main() {
   PreOrder(root);
   std::cout << std::endl;
   InOrder(root);
+  std::cout << std::endl;
+  PostOrder(root);
   // ===============================================================
 
   root = nullptr;
