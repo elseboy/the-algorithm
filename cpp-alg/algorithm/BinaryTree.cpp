@@ -1,5 +1,6 @@
 #include <array>
 #include <iostream>
+#include <queue>
 #include <stack>
 #include <string>
 
@@ -74,6 +75,24 @@ void PostOrder(Node *node) {
   }
 }
 
+void BFS(Node *node) {
+  if (node == nullptr)
+    return;
+
+  std::queue<Node *> queue;
+  queue.push(node);
+
+  while (!queue.empty()) {
+    Node *current = queue.front();
+    queue.pop();
+    std::cout << current->data << " ";
+    if (current->left)
+      queue.push(current->left);
+    if (current->right)
+      queue.push(current->right);
+  }
+}
+
 int main() {
 
   Node *root = new Node("A");
@@ -87,7 +106,7 @@ int main() {
    *              A                       pre_order： ABDEGCF
    *            /  \                      in_order：	DBGEACF
    *          B     C                     post_order：DGEBFCA
-   *        /  \      \                   BFS_travel：ABDEGCF
+   *        /  \      \                   BFS_travel：ABCDEFG
    *      D     E      F
    *           /
    *         G
@@ -99,6 +118,8 @@ int main() {
   InOrder(root);
   std::cout << std::endl;
   PostOrder(root);
+  std::cout << std::endl;
+  BFS(root);
   // ===============================================================
 
   root = nullptr;
