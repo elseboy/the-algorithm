@@ -93,6 +93,32 @@ void BFS(Node *node) {
   }
 }
 
+void CountLevels(Node *node) {
+
+  if (node == nullptr)
+    return;
+
+  std::queue<Node *> current_level_queue;
+  std::queue<Node *> next_level_queue;
+  int depth = 0;
+  current_level_queue.push(node);
+  while (!current_level_queue.empty()) {
+    Node *current = current_level_queue.front();
+    current_level_queue.pop();
+
+    if (current->left)
+      next_level_queue.push(current->left);
+    if (current->right)
+      next_level_queue.push(current->right);
+
+    if (current_level_queue.empty()) {
+      std::swap(current_level_queue, next_level_queue);
+      depth++;
+    }
+  }
+  std::cout << "depth: " << depth << std::endl;
+}
+
 int main() {
 
   Node *root = new Node("A");
@@ -120,6 +146,8 @@ int main() {
   PostOrder(root);
   std::cout << std::endl;
   BFS(root);
+  std::cout << std::endl;
+  CountLevels(root);
   // ===============================================================
 
   root = nullptr;
