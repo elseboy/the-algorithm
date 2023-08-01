@@ -32,7 +32,7 @@ class LRUCache {
   }
 
   void addToFront(int key, int value) {
-    Node *newNode = new Npde(key, value);
+    Node *newNode = new Node(key, value);
     if (!head) {
       head = tail = newNode;
     } else {
@@ -57,6 +57,49 @@ class LRUCache {
       tail->next = nullptr;
     }
   }
+
+public:
+  LRUCache(int capacity) : capacity(capacity), head(nullptr), tail(nullptr) {}
+
+  int get(int key) {
+    if (cache.find(key) != cache.end()) {
+      Node *node = cache[key];
+      moveToFront(node);
+      return node->value;
+    }
+    return -1;
+  }
+
+  void put(int key, int value) {
+    if (cache.find(key) != cache.end()) {
+      Node *node = cache[key];
+      node->value = value;
+      moveToFront(node);
+    } else {
+      if (cache.size() >= capacity)
+        deleteTail();
+
+      addToFront(key, value);
+      cache[key] = head;
+    }
+  }
+
+  ~LRUCache() {
+    while (head) {
+      Node *temp = head->next;
+      delete head;
+      head = temp;
+    }
+  }
 };
 
-int main() { return 0; }
+int main() {
+  LRUCache lruCache(3);
+  lruCache.put(1, 1);
+  lruCache.put(2, 2);
+  lruCache.put(3, 3);
+
+  std::cout << lruCache.get(1) << std::endl;
+  std::cout << lruCache.get(2) << std::endl;
+  return 0;
+}
