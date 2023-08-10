@@ -2,69 +2,54 @@
 #include <unordered_map>
 
 class LRUCache {
+
+private:
   struct Node {
     int key;
     int value;
     Node *prev;
     Node *next;
+
     Node(int k, int v) : key(k), value(v), prev(nullptr), next(nullptr) {}
   };
 
-  int capacity;
-  std::unordered_map<int, Node *> cache;
+  int size;
   Node *head;
   Node *tail;
-
-  void moveToFront(Node *node) {
-    if (node == nullptr)
-      return;
-
-    node->prev->next = node->next;
-    if (node == tail)
-      tail = node->prev;
-    else
-      node->next->prev = node->prev;
-
-    node->prev = nullptr;
-    node->next = head;
-    head->prev = node;
-    head = node;
-  }
-
-  void addToFront(int key, int value) {
-    Node *newNode = new Node(key, value);
-    if (!head) {
-      head = tail = newNode;
-    } else {
-      newNode->next = head;
-      head->prev = newNode;
-      head = newNode;
-    }
-  }
-
-  void deleteTail() {
-    if (!tail)
-      return;
-
-    cache.erase(tail->key);
-
-    if (head == tail) {
-      delete tail;
-      head = tail = nullptr;
-    } else {
-      tail = tail->prev;
-      delete tail->next;
-      tail->next = nullptr;
-    }
-  }
+  std::unordered_map<int, Node *> cache;
 
 public:
-  LRUCache(int capacity) : capacity(capacity), head(nullptr), tail(nullptr) {}
+  LRUCache(int cap) : size(cap), head(nullptr), tail(nullptr) {}
+
+  void addToHead(Node *node) {
+    if (!head) {
+      head = tail = node;
+    } else {
+      node->next = head;
+      head->prev = node;
+      head = node;
+    }
+  }
+
+  void remove(Node *node) {
+    if (node->prev) {
+      node->prev->next = node->next;
+    } else {
+      head = node->next;
+    }
+
+    if (node->next) {
+      node->next->prev = node->prev;
+    } else {
+      tail = node->prev;
+    }
+  }
 
   int get(int key) {
     if (cache.find(key) != cache.end()) {
       Node *node = cache[key];
-      moveToFront(node);
+      remove(node);
+      addToHead(node);
       return node->value;
     }
     return -1;
@@ -74,32 +59,39 @@ public:
     if (cache.find(key) != cache.end()) {
       Node *node = cache[key];
       node->value = value;
-      moveToFront(node);
+      remove(node);
+      addToHead(node);
     } else {
-      if (cache.size() >= capacity)
-        deleteTail();
+      if (cache.size() >= size) {
+        cache.erase(tail->key);
+        remove(tail);
+      }
 
-      addToFront(key, value);
-      cache[key] = head;
+      Node *newNode = new Node(key, value);
+      cache[key] = newNode;
+      addToHead(newNode);
     }
   }
 
-  ~LRUCache() {
-    while (head) {
-      Node *temp = head->next;
-      delete head;
-      head = temp;
+  void display() {
+    Node *current = head;
+    while (current) {
+      std::cout << current->key << " ";
+      current = current->next;
     }
+    std::cout << std::endl;
   }
 };
 
 int main() {
-  LRUCache lruCache(3);
-  lruCache.put(1, 1);
-  lruCache.put(2, 2);
-  lruCache.put(3, 3);
+  LRUCache lru(3);
+  lru.put(1, 1);
+  lru.put(2, 2);
+  lru.put(3, 3);
+  lru.put(4, 4);
 
-  std::cout << lruCache.get(1) << std::endl;
-  std::cout << lruCache.get(2) << std::endl;
+  lru.get(2);
+
+  lru.display();
   return 0;
 }
