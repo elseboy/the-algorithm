@@ -26,6 +26,15 @@ def max_depth(root):
     return depth
 
 
+def max_depth_recursively(root):
+    if root is None:
+        return 0
+    left = max_depth_recursively(root.left)
+    right = max_depth_recursively(root.right)
+    print(left, right)
+    return max(left, right) + 1
+
+
 root = TreeNode("A")
 root.left = TreeNode("B")
 root.right = TreeNode("C")
@@ -34,4 +43,5 @@ root.left.right = TreeNode("E")
 root.right.right = TreeNode("F")
 root.left.right.left = TreeNode("G")
 
-print(max_depth(root))
+# print(max_depth(root))
+print(max_depth_recursively(root))
