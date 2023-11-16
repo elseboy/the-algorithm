@@ -12,8 +12,8 @@ def insert(intervals, newInterval):
                 min(newInterval[0], intervals[i][0]),
                 max(newInterval[1], intervals[i][1]),
             ]
-
-    return
+    res.append(newInterval)
+    return res
 
 
 intervals = [[1, 3], [6, 9]]
