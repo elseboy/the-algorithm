@@ -5,13 +5,21 @@ class ListNode:
 
 
 def remove_duplicates(head):
-    curr = head
+    dummy = ListNode(0)
+    dummy.next = head
+    prev = dummy
 
-    while curr:
-        while curr.next and curr.next.val == curr.val:
-            curr.next = curr.next.next
-        curr = curr.next
-    return head
+    while head:
+        while head.next and head.val == head.next.val:
+            head = head.next
+
+        if prev.next == head:
+            prev = prev.next
+        else:
+            prev.next = head.next
+
+        head = head.next
+    return dummy.next
 
 
 head = ListNode(1)
@@ -19,6 +27,7 @@ head.next = ListNode(2)
 head.next.next = ListNode(3)
 head.next.next.next = ListNode(3)
 head.next.next.next.next = ListNode(5)
+head.next.next.next.next.next = ListNode(5)
 
 head = remove_duplicates(head)
 
