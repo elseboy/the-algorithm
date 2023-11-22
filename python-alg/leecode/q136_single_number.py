@@ -8,5 +8,14 @@ def find_single_number(nums):
     return num_set.pop()
 
 
+def bit_solution(nums):
+    result = 0
+
+    for num in nums:
+        result ^= num
+        print(result)
+    return result
+
+
 nums = [4, 1, 2, 1, 2]
-print(find_single_number(nums))
+print(bit_solution(nums))
