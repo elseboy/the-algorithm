@@ -7,5 +7,17 @@ def climbing_stairs(stairs):
     return r
 
 
-stairs = 3
+def dp_solution(n):
+    dp = [0] * (n + 1)
+    dp[1] = 1
+    dp[2] = 2
+
+    for i in range(3, n + 1):
+        dp[i] = dp[i - 1] + dp[i - 2]
+
+    print(dp[n])
+
+
+stairs = 5
 print(climbing_stairs(stairs))
+print(dp_solution(stairs))
