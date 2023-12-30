@@ -15,3 +15,7 @@
 4. Contains Duplicate:
 
    Use a map to map the num and its' index, then check if it is duplicated in the map and its' index minus duplicate to make sure it is  smaller than k.
+
+5. Product of Array Except Self:
+
+   Create two arrays to compute the prefix and postfix, like [1, 2, 3, 4], prefix is [1, 2, 6, 24], postfix is [24, 24, 12, 4], then the result is prefix[i - 1] times postfix[i + 1], for element 2, its prefix is 1, postfix is 12, nums[1] should be 1 * 12, which is 12.
