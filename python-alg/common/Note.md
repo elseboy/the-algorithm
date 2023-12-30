@@ -23,3 +23,5 @@
 6. Maximum Subarray:
 
    Assume the maximum sum starts with the first element. Continue adding elements to the current sum. If the current sum becomes smaller than 0, reset it to 0. This indicates that the previous elements do not contribute to the maximum sum, and the next element will be the start of the subarray and continue to do it. Then compare the maximum sum and current sum through max().
+
+7. To find the maximum product of a subarray, create two dynamic programming arrays (`max_dp` and `min_dp`) to track the maximum and minimum products ending at each index. Iterate through the array, updating both arrays, and return the maximum product encountered.
