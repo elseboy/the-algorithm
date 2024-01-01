@@ -51,3 +51,7 @@
 13. Verifying an Alien Dictionary:
 
     Skip
+
+14. Next Permutation:
+
+    First thing is to handle case like `[4, 3, 2, 1]`, the next smallest permutation is `1, 2, 3, 4`, so we have to check if the entire list is decending order from back to start, if it is, just `reverse list` is enough. Then, if we have to start at the end of the list again to  comapre `nums[j]` smaller than `nums[i]` because we have to get `i` and `j` as close as possibale, so we can get smallest permutaion, which is next permutation. Once we get `i` and  `j`, we can simply just `swap` them and make sure the rest sub array is increasing order after `i` because we can make sure that this is smallest next permutation.
