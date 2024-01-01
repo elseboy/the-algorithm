@@ -43,3 +43,7 @@
 11. Three sum:
 
     Also yse binary method, especially `two sum II` soluton, the first thing is sort array, then apply the `two sum II` solution, the only dfference is when `total == 0`, we have to remove duplicates on the both sides of `left` and `right` using while, if no duplicates, just simply move two points until they do not meet the condition of `l < r`, this means the current `i` only have these much triplets.
+
+12. Container with most water:
+
+    Pass
