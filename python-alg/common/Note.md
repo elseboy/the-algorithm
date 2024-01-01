@@ -27,3 +27,8 @@
 7. Maximum Product Subarray:
 
    To find the maximum product of a subarray, create two dynamic programming arrays (`max_dp` and `min_dp`) to track the maximum and minimum products ending at each index. Iterate through the array, updating both arrays, and return the maximum product encountered.
+
+8. Find Minimum in Rotated Sorted Array:
+
+   Use binary method to see if mid elem is bigger than r elem, if it is, it means the array is rotated and we can move `l` to `mid + 1`, of is not, then we set r  = `mid` not `mid - 1` because this would miss the min value, like `[3, 1, 2]`, it will return 3 not 1. So the final min value should be `nums[l]`.
+
