@@ -32,3 +32,7 @@
 
    Use binary method to see if mid elem is bigger than r elem, if it is, it means the array is rotated and we can move `l` to `mid + 1`, of is not, then we set r  = `mid` not `mid - 1` because this would miss the min value, like `[3, 1, 2]`, it will return 3 not 1. So the final min value should be `nums[l]`.
 
+9. Search in Rotated Sorted Array:
+
+   Similarly, as the last question, we can also use binary method to solve this problem, the core problem is in `if nums[mid] > nums[r]:` statment, we have to determine wether go left half or go right half, so if  `nums[mid] > target >= nums[l]`, this means target is in somewhere in this array from `left to mid`, then we have to set `r = mid - 1 else l = mid + 1`, also in else case of  `nums[mid] > nums[r]`, we have to check if  `nums[mid] < target <= nums[r]`, this means we have go through this part to find target index, so we set `l = mid + 1 else r = mid - 1`.
+
