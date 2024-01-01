@@ -47,3 +47,7 @@
 12. Container with most water:
 
     Pass
+
+13. Verifying an Alien Dictionary:
+
+    Skip
