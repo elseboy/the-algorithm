@@ -39,3 +39,7 @@
 10. Two sum II:
 
    Also use binary method, compare `arr[l] + arr[r]` with `target`, if smaller than `target`, this means `l` should be bigger and will get `bigger total` compare to the  `target`, `r` should be smaller otherwise, the overall time complexity is `O(n)`.
+
+11. Three sum:
+
+    Also yse binary method, especially `two sum II` soluton, the first thing is sort array, then apply the `two sum II` solution, the only dfference is when `total == 0`, we have to remove duplicates on the both sides of `left` and `right` using while, if no duplicates, just simply move two points until they do not meet the condition of `l < r`, this means the current `i` only have these much triplets.
