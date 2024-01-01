@@ -36,3 +36,7 @@
 
    Similarly, as the last question, we can also use binary method to solve this problem, the core problem is in `if nums[mid] > nums[r]:` statment, we have to determine wether go left half or go right half, so if  `nums[mid] > target >= nums[l]`, this means target is in somewhere in this array from `left to mid`, then we have to set `r = mid - 1 else l = mid + 1`, also in else case of  `nums[mid] > nums[r]`, we have to check if  `nums[mid] < target <= nums[r]`, this means we have go through this part to find target index, so we set `l = mid + 1 else r = mid - 1`.
 
+10. Two sum II:
+
+   Also use binary method, compare `arr[l] + arr[r]` with `target`, if smaller than `target`, this means `l` should be bigger and will get `bigger total` compare to `target`, `r` should be smaller otherwise.
+
