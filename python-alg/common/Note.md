@@ -77,3 +77,7 @@
 1. Climbing Stairs:
 
    The base case is when `n == 1` we will have only `1` step and if it is `n == 2` then we will have `2`. The core idea is when it comes to the next  `i`, we have to combine both cases, like `dp[i] = dp[i - 1] + dp[i - 2]`. Then `dp[n]` is the answer. 
+
+2. Coin Change:
+
+   Use `dp array` to track minimum from smaller to bigger `(bottom up)`, all we need is two loops, first one is coins loop and inner loop is i from coin to amount, take the `min(dp[i], dp[i - coin] + 1)`, and `dp[amount]` is the answer.
