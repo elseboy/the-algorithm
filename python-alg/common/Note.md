@@ -67,3 +67,7 @@
 17. Trapping Rain Water:
 
     Assume `leftMax = l` and  `rightMax = r`, so the core soluton is how to move pointers, when `leftMax < rightMax`, we can shift `l` to `1` more position, and take the bigeest so far to minus `height[l]`, so there are only two possible outcomes, one is like use case `[1, 0, 2]`, `leftMax` will remain `1` when we shift `l` pointer to `0`, so we say there is only `1` water that we can trap. Another is where use case like `[1, 2, 3]`, the `leftMax` will update at the same time when we shift `l` pointer, so we say there is no water that we can trap because we are doing `maxLeft - height[l]`. Same thing for `rightMax`.
+
+18. Median of Two Sorted Arrays
+
+    Skip
