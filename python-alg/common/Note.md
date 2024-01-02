@@ -71,3 +71,9 @@
 18. Median of Two Sorted Arrays
 
     Skip
+
+# Dynamic Programming
+
+1. Climbing Stairs:
+
+   The base case is when `n == 1` we will have only `1` step and if it is `n == 2` then we will have `2`. The core idea is when it comes to the next  `i`, we have to combine both cases, like `dp[i] = dp[i - 1] + dp[i - 2]`. Then `dp[n]` is the answer. 
