@@ -81,3 +81,7 @@
 2. Coin Change:
 
    Use `dp array` to track minimum from smaller to bigger `(bottom up)`, all we need is two loops, first one is coins loop and inner loop is i from coin to amount, take the `min(dp[i], dp[i - coin] + 1)`, and `dp[amount]` is the answer.
+
+3. Longest Increasing Subsequence:
+
+   The main solution for this question is two loops, where `i` is backwards and `j` to loop the rest element after `i`, if `nums[i] < nums[j]`, this means it is increasing order from `i` to  `j` and we only take `max(dp[i], 1 + dp[j])`,  also, each element is considered as a subsequence, so we have to init `dp[1] * n`.
