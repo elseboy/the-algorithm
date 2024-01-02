@@ -93,3 +93,11 @@
 5. Word Break:
 
    So the first thing is to create a `dp[False] * len(s) + 1` and set `dp[len(s)]` to `True` because it is our base case, and then loop  `s` backwards and loop `dict` inside of the loop, the core is to check `i + len(w) <= len(s)` because use case like `aaaabbbb` and dict is `aaaa, bbbb`,  when we reach the last `b` (backwards), it will fit the length condition, otherwise, current string from `i` to end does not have `len(w)` this long, and add `s[i:i + len(w)] == w`, if they are the same, it means the current `i` plus `len(w)` can reach the end, where is our base case (True), we simply just set `dp[i] = dp[i + len(w)]`, then return `dp[0]`.
+
+6. Combination Sum：
+
+   Mark
+
+7. House Robber:
+
+   So the basic recurrence relation is either we rob the current house or skip it to rob the next one, we have to compare which one is bigger because we are getting the max money that we can rob, so `dp[i] = max(dp[i−1], dp[i−2] + current house money)`.
