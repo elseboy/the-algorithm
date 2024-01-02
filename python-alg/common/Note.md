@@ -85,3 +85,7 @@
 3. Longest Increasing Subsequence:
 
    The main solution for this question is two loops, where `i` is backwards and `j` to loop the rest element after `i`, if `nums[i] < nums[j]`, this means it is increasing order from `i` to  `j` and we only take `max(dp[i], 1 + dp[j])`,  also, each element is considered as a subsequence, so we have to init `dp[1] * n`.
+
+4. Longest Common Subsequence:
+
+   The main solution is init a matrix where row is `m + 1` and column is `n + 1` so that we can get the answer from bottom-up easier. Then, two backwards loops will compare `text1[i]` and `text2[j]`, if they are same, it means that this is a subsequence, we have to set `dp[i][j] = 1 + dp[i + 1][j + 1]`, we create bigger matrix so this will not out of index, if they do not match, there is no common character at the current positions, so we need to make a decision, so `dp[i][j] = max(dp[i + 1][j], dp[i][j + 1])`, we take the maximum of these two possibilities as we want to find the longest common subsequence, then, `dp[0][0]` is the answer. 
