@@ -89,3 +89,7 @@
 4. Longest Common Subsequence:
 
    The main solution is init a matrix where row is `m + 1` and column is `n + 1` so that we can get the answer from bottom-up easier. Then, two backwards loops will compare `text1[i]` and `text2[j]`, if they are same, it means that this is a subsequence, we have to set `dp[i][j] = 1 + dp[i + 1][j + 1]`, we create bigger matrix so this will not out of index, if they do not match, there is no common character at the current positions, so we need to make a decision, so `dp[i][j] = max(dp[i + 1][j], dp[i][j + 1])`, we take the maximum of these two possibilities as we want to find the longest common subsequence, then, `dp[0][0]` is the answer. 
+
+5. Word Break:
+
+   So the first thing is to create a `dp[False] * len(s) + 1` and set `dp[len(s)]` to `True` because it is our base case, and then loop  `s` backwards and loop `dict` inside of the loop, the core is to check `i + len(w) <= len(s)` because use case like `aaaabbbb` and dict is `aaaa, bbbb`,  when we reach the last `b` (backwards), it will fit the length condition, otherwise, current string from `i` to end does not have `len(w)` this long, and add `s[i:i + len(w)] == w`, if they are the same, it means the current `i` plus `len(w)` can reach the end, where is our base case (True), we simply just set `dp[i] = dp[i + len(w)]`, then return `dp[0]`.
