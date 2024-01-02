@@ -101,3 +101,7 @@
 7. House Robber:
 
    So the basic recurrence relation is either we rob the current house or skip it to rob the next one, we have to compare which one is bigger because we are getting the max money that we can rob, so `dp[i] = max(dp[i−1], dp[i−2] + current house money)`.
+
+8. House Robber II:
+
+   Just simple exclusive the first element and last element, each time call the `House Robber I` solution, then return `max`.
