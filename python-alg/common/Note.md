@@ -12,7 +12,7 @@
 
    Pass
 
-4. Contains Duplicate:
+4. Contains Duplicate II:
 
    Use a map to map the num and its' index, then check if it is duplicated in the map and its' index minus duplicate to make sure it is  smaller than k.
 
@@ -36,13 +36,13 @@
 
    Similarly, as the last question, we can also use binary method to solve this problem, the core problem is in `if nums[mid] > nums[r]:` statment, we have to determine wether go left half or go right half, so if  `nums[mid] > target >= nums[l]`, this means target is in somewhere in this array from `left to mid`, then we have to set `r = mid - 1 else l = mid + 1`, also in else case of  `nums[mid] > nums[r]`, we have to check if  `nums[mid] < target <= nums[r]`, this means we have go through this part to find target index, so we set `l = mid + 1 else r = mid - 1`.
 
-10. Twp sum II:
+10. Two sum II:
 
    Also use binary method, compare `arr[l] + arr[r]` with `target`, if smaller than `target`, this means `l` should be bigger and will get `bigger total` compare to the  `target`, `r` should be smaller otherwise, the overall time complexity is `O(n)`.
 
 11. Three sum:
 
-    Also yse binary method, especially `two sum II` soluton, the first thing is sort array, then apply the `two sum II` solution, the only dfference is when `total == 0`, we have to remove duplicates on the both sides of `left` and `right` using while, if no duplicates, just simply move two points until they do not meet the condition of `l < r`, this means the current `i` only have these much triplets.
+    Also use binary method, especially `two sum II` soluton, the first thing is sort array, then apply the `two sum II` solution, the only dfference is when `total == 0`, we have to remove duplicates on the both sides of `left` and `right` using while, if no duplicates, just simply move two points until they do not meet the condition of `l < r`, this means the current `i` only have these much triplets.
 
 12. Container with most water:
 
