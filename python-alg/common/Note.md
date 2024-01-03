@@ -68,9 +68,17 @@
 
     Assume `leftMax = l` and  `rightMax = r`, so the core soluton is how to move pointers, when `leftMax < rightMax`, we can shift `l` to `1` more position, and take the bigeest so far to minus `height[l]`, so there are only two possible outcomes, one is like use case `[1, 0, 2]`, `leftMax` will remain `1` when we shift `l` pointer to `0`, so we say there is only `1` water that we can trap. Another is where use case like `[1, 2, 3]`, the `leftMax` will update at the same time when we shift `l` pointer, so we say there is no water that we can trap because we are doing `maxLeft - height[l]`. Same thing for `rightMax`.
 
-18. Median of Two Sorted Arrays
+18. Kth Largest Element in an Array
 
-    Skip
+19. Sort an Array
+
+20. Merge Sorted Array
+
+21. Merge Intervals
+
+22. First Missing Positive
+
+23. Subsets
 
 # Dynamic Programming
 
@@ -82,21 +90,19 @@
 
    Use `dp array` to track minimum from smaller to bigger `(bottom up)`, all we need is two loops, first one is coins loop and inner loop is i from coin to amount, take the `min(dp[i], dp[i - coin] + 1)`, and `dp[amount]` is the answer.
 
-3. Longest Increasing Subsequence:
+3. Coin Change II
+
+4. Longest Increasing Subsequence:
 
    The main solution for this question is two loops, where `i` is backwards and `j` to loop the rest element after `i`, if `nums[i] < nums[j]`, this means it is increasing order from `i` to  `j` and we only take `max(dp[i], 1 + dp[j])`,  also, each element is considered as a subsequence, so we have to init `dp[1] * n`.
 
-4. Longest Common Subsequence:
+5. Longest Common Subsequence:
 
    The main solution is init a matrix where row is `m + 1` and column is `n + 1` so that we can get the answer from bottom-up easier. Then, two backwards loops will compare `text1[i]` and `text2[j]`, if they are same, it means that this is a subsequence, we have to set `dp[i][j] = 1 + dp[i + 1][j + 1]`, we create bigger matrix so this will not out of index, if they do not match, there is no common character at the current positions, so we need to make a decision, so `dp[i][j] = max(dp[i + 1][j], dp[i][j + 1])`, we take the maximum of these two possibilities as we want to find the longest common subsequence, then, `dp[0][0]` is the answer. 
 
-5. Word Break:
+6. Word Break:
 
    So the first thing is to create a `dp[False] * len(s) + 1` and set `dp[len(s)]` to `True` because it is our base case, and then loop  `s` backwards and loop `dict` inside of the loop, the core is to check `i + len(w) <= len(s)` because use case like `aaaabbbb` and dict is `aaaa, bbbb`,  when we reach the last `b` (backwards), it will fit the length condition, otherwise, current string from `i` to end does not have `len(w)` this long, and add `s[i:i + len(w)] == w`, if they are the same, it means the current `i` plus `len(w)` can reach the end, where is our base case (True), we simply just set `dp[i] = dp[i + len(w)]`, then return `dp[0]`.
-
-6. Combination Sum：
-
-   Mark
 
 7. House Robber:
 
@@ -113,3 +119,106 @@
 10. Unique Paths:
 
     Use bottom-up dp to set `dp[i][j] = dp[i + 1][j] + dp[i][j + 1]` because we can only mobe down or right, which means the edges of this martrix will be only 1, we are only computing `m - 2` and `n - 2` when looping backwards.
+
+11. Pascal's Triangle:
+
+    First init matrix `dp` to be rows by rows, then set `dp[0][0] = 1` because there is only `1` number in the first row, the loop the rest and to rows and set the start of each row to be `1` because this can be only `1`, then compute `j` from `1` to `i + 1`, set `dp[i][j] = dp[i - 1][j - 1] + dp[i - 1][j]`, before `+` is the the previous row of  current  `i'` left, the right is `dp[i - 1][j]`, so plus them we can have result for  current `i` position.
+
+12. Edit Distance
+
+13. Combination Sum IV
+
+14. Minimum Path Sum
+
+15. Longest Consecutive Sequence
+
+# Greedy
+
+1. Jump Game I
+2. Jump Game II
+
+# Backtrack
+
+1. Combination Sum
+2. Generate Parentheses
+3. Permutations
+
+# String
+
+1. Longest Substring Without Repeating Characters
+2. Longest Palindromic Substring
+3. Add Strings
+4. Restore IP Addresses
+5. String to Integer (atoi)
+6. Compare Version Numbers
+7. Reverse Words in a String
+8. Multiply Strings
+9. Longest Common Prefix
+10. Group Anagrams	
+11. Valid Parentheses
+12. Longest Substring Without Repeating Characters
+
+# Linked List
+
+1. Reverse Linked List I
+2. Reverse Linked List II
+3. Reverse Nodes in k-Group
+4. Merge Two Sorted Lists
+5. Linked List Cycle I
+6. Linked List Cycle II
+7. Intersection of Two Linked Lists
+8. Merge k Sorted Lists
+9. Reorder List
+10. Remove Nth Node From End of List
+11. Remove Duplicates from Sorted List I
+12. Remove Duplicates from Sorted List II
+13. Sort List
+14. Add Two Numbers
+15. Palindrome Linked List (Space complexity O(1))
+
+# Tree
+
+1. Binary Tree Level Order Traversal
+2. Binary Tree Inorder Traversal
+3. Lowest Common Ancestor of a Binary Tree
+4. Binary Tree Zigzag Level Order Traversal
+5. Binary Tree Maximum Path Sum
+6. Binary Tree Right Side View
+7. Construct Binary Tree from Preorder and Inorder Traversal
+8. Binary Tree Preorder Traversal
+9. Maximum Depth of Binary Tree
+10. Balanced Binary Tree
+11. Sum Root to Leaf Numbers
+12. Symmetric Tree
+13. Diameter of Binary Tree
+14. Validate Binary Search Tree
+15. Path Sum I
+16. Path Sum II
+
+# Stack
+
+1. Valid Parentheses
+2. Implement Queue using Stacks
+3. Min Stack
+4. Longest Valid Parentheses
+5. Decode String
+
+# Graph
+
+1. Number of Islands
+2. Spiral Matrix
+3. Rotate Image
+4. Maximal Square
+5. Search a 2D Matrix II
+
+# Sliding Window
+
+1. Sliding Window Maximum
+2. Minimum Window Substring
+
+# Others
+
+1. LRU Cache
+2. Meeting Room 1
+3. Meeting Room II
+4. Merge Intervals
