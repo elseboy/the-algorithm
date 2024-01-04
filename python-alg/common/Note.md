@@ -74,6 +74,8 @@
 
 19. Merge Sorted Array
 
+    Set `p1, p2, p = m - 1, n - 1, m + n - 1`, then `if p2 >= 0` as `while` condition because we are going to midify `nums1`, in the loop, we also have to check `if p1 >= 0 and nums1[p1] > nums2[p2]` because if `nums1` shorter and `nums2` not done yet, `p1 >= 0`  will make sure it will copy the rest to the `nums1[p]`.
+
 20. Merge Intervals
 
 21. First Missing Positive
