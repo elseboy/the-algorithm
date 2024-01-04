@@ -128,7 +128,9 @@
 
     Just like Unique paths problem, we also need `dp` with extra layers and set these layers to increaing order from bottom-up, then we loop backwards `i` as `m - 1, -1, -1` and `j` as `n - 1, -1, -1`, if `word1[i] == word2[j]`, then `dp[i][j] = diagonal`，else we have to find min operations, so `dp[i][j] = min(dp[i + 1][j], dp[i][j + 1], dp[i + 1][j + 1]) + 1 `.
 
-13. Minimum Path Sum
+13. Minimum Path Sum:
+
+    init matrix dp and set `dp[rows - 1][cols] = 0` and `dp[rows][cols - 1] = 0` because we are looking the right and down of the current value from bottom-up way, so `down = dp[r + 1][c]`, `right = dp[r][c + 1]`, then set `dp[r][c]`  to current  plus  the smaller one between right and down because we are computing the minimum, then return `dp[0][0]`.
 
 14. Longest Consecutive Sequence
 
