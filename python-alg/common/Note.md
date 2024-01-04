@@ -48,39 +48,35 @@
 
     Pass
 
-13. Verifying an Alien Dictionary:
-
-    Skip
-
-14. Next Permutation:
+13. Next Permutation:
 
     First thing is to handle case like `[4, 3, 2, 1]`, the next smallest permutation is `1, 2, 3, 4`, so we have to check if the entire list is decending order from back to start, if it is, just `reverse list` is enough. Then, we have to start at the end of the list again to  comapre `nums[j]` smaller than `nums[i]` because we have to get `i` and `j` as close as possibale, so we can get smallest permutaion, which is next permutation. Once we get `i` and  `j`, we can simply just `swap` them and make sure the rest sub array is increasing order after `i` because we can make sure that this is smallest next permutation.
 
-15. Remove Duplicates from Sorted Array:
+14. Remove Duplicates from Sorted Array:
 
     Only need to count the different element, like `[1, 1, 2, 2, 2, 3, 3]`, only increase times when it appears `nums[i] != nums[i + 1]`, the final times is the answer.
 
-16. Find First and Last Position of Element in Sorted Array:
+15. Find First and Last Position of Element in Sorted Array:
 
     Create two functions with binary search method to search the left most and right most, return the index of each index.
 
-17. Trapping Rain Water:
+16. Trapping Rain Water:
 
     Assume `leftMax = l` and  `rightMax = r`, so the core soluton is how to move pointers, when `leftMax < rightMax`, we can shift `l` to `1` more position, and take the bigeest so far to minus `height[l]`, so there are only two possible outcomes, one is like use case `[1, 0, 2]`, `leftMax` will remain `1` when we shift `l` pointer to `0`, so we say there is only `1` water that we can trap. Another is where use case like `[1, 2, 3]`, the `leftMax` will update at the same time when we shift `l` pointer, so we say there is no water that we can trap because we are doing `maxLeft - height[l]`. Same thing for `rightMax`.
 
-18. Kth Largest Element in an Array:
+17. Kth Largest Element in an Array:
 
     Quick select would solve the problem, first set `pivot, pointer = nums[r], l`, then loop it and compare `nums[i] <= pivot`, if this is the case, then swap `nums[p], nums[i] = nums[i], nums[p]`, this can make sure on the left side are the elements that are smaller than `pivot` and right side are bigger elements, then swap `pivot, nums[p] = nums[p], pivot`, this will arrange the array to be a true  ` smaller | piovt | bigger` array, then comapre `k < p`, then call fuction again and pass `l, p - 1`, or `k > p`, then call function agagin and pass `p + 1, r`, or we found `k == p`, then simply just return `nums[p]`.
 
-19. Sort an Array
+18. Sort an Array
 
-20. Merge Sorted Array
+19. Merge Sorted Array
 
-21. Merge Intervals
+20. Merge Intervals
 
-22. First Missing Positive
+21. First Missing Positive
 
-23. Subsets
+22. Subsets
 
 # Dynamic Programming
 
