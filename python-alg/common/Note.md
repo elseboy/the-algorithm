@@ -80,10 +80,6 @@
 
     So bascially we have to sort the sub list of list first, we can't make sure are they overlapping otherwsie. `list.sort(key=lambda i: i[0])`, then take out the first element, like `output = [list[0]]`, then loop the rest and take the last end  out `output[-1][1]`, if current `start <= lastEnd`, this means they are overlapping and we need update the `lastEnd` because we are not sure which end is bigger, so we do `output[-1][1] = max(lastEnd, end)`, else they are not overlapping, just append to `output`.
 
-21. First Missing Positive
-
-22. Subsets
-
 # Dynamic Programming
 
 1. Climbing Stairs:
@@ -143,9 +139,10 @@
 
 # Backtrack
 
-1. Combination Sum
-2. Generate Parentheses
-3. Permutations
+1. Subsets
+2. Combination Sum
+3. Generate Parentheses
+4. Permutations
 
 # String
 
