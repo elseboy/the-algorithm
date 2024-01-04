@@ -132,9 +132,7 @@
 
     init matrix dp and set `dp[rows - 1][cols] = 0` and `dp[rows][cols - 1] = 0` because we are looking the right and down of the current value from bottom-up way, so `down = dp[r + 1][c]`, `right = dp[r][c + 1]`, then set `dp[r][c]`  to current  plus  the smaller one between right and down because we are computing the minimum, then return `dp[0][0]`.
 
-14. Longest Consecutive Sequence
-
-15. Fibonacci Number: 
+14. Fibonacci Number: 
 
     Pass
 
