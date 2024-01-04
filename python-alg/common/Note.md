@@ -68,7 +68,9 @@
 
     Quick select would solve the problem, first set `pivot, pointer = nums[r], l`, then loop it and compare `nums[i] <= pivot`, if this is the case, then swap `nums[p], nums[i] = nums[i], nums[p]`, this can make sure on the left side are the elements that are smaller than `pivot` and right side are bigger elements, then swap `pivot, nums[p] = nums[p], pivot`, this will arrange the array to be a true  ` smaller | piovt | bigger` array, then comapre `k < p`, then call fuction again and pass `l, p - 1`, or `k > p`, then call function agagin and pass `p + 1, r`, or we found `k == p`, then simply just return `nums[p]`.
 
-18. Sort an Array
+18. Sort an Array:
+
+    Mark
 
 19. Merge Sorted Array
 
