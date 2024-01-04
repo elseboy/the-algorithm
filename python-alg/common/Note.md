@@ -128,11 +128,13 @@
 
     Just like Unique paths problem, we also need `dp` with extra layers and set these layers to increaing order from bottom-up, then we loop backwards `i` as `m - 1, -1, -1` and `j` as `n - 1, -1, -1`, if `word1[i] == word2[j]`, then `dp[i][j] = diagonal`，else we have to find min operations, so `dp[i][j] = min(dp[i + 1][j], dp[i][j + 1], dp[i + 1][j + 1]) + 1 `.
 
-13. Combination Sum IV
+13. Minimum Path Sum
 
-14. Minimum Path Sum
+14. Longest Consecutive Sequence
 
-15. Longest Consecutive Sequence
+15. Fibonacci Number: 
+
+    Pass
 
 # Greedy
 
