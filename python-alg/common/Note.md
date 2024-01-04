@@ -68,7 +68,9 @@
 
     Assume `leftMax = l` and  `rightMax = r`, so the core soluton is how to move pointers, when `leftMax < rightMax`, we can shift `l` to `1` more position, and take the bigeest so far to minus `height[l]`, so there are only two possible outcomes, one is like use case `[1, 0, 2]`, `leftMax` will remain `1` when we shift `l` pointer to `0`, so we say there is only `1` water that we can trap. Another is where use case like `[1, 2, 3]`, the `leftMax` will update at the same time when we shift `l` pointer, so we say there is no water that we can trap because we are doing `maxLeft - height[l]`. Same thing for `rightMax`.
 
-18. Kth Largest Element in an Array
+18. Kth Largest Element in an Array:
+
+    Quick select would solve the problem, first set `pivot, pointer = nums[r], l`, then loop it and compare `nums[i] <= pivot`, if this is the case, then swap `nums[p], nums[i] = nums[i], nums[p]`, this can make sure on the left side are the elements that are smaller than `pivot` and right side are bigger elements, then swap `pivot, nums[p] = nums[p], pivot`, this will arrange the array to be a true  ` smaller | piovt | bigger` array, then comapre `k < p`, then call fuction again and pass `l, p - 1`, or `k > p`, then call function agagin and pass `p + 1, r`, or we found `k == p`, then simply just return `nums[p]`.
 
 19. Sort an Array
 
