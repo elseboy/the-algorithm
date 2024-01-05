@@ -141,6 +141,9 @@
 # Greedy
 
 1. Jump Game I
+
+   The basic idea is that reverse check,  record last index of the array, and loop the rest from back to start to check the `nums[i]`  of current index to see how far we can go, which indicates that `i + nums[i]`, it means, if `i` is `2` and `nums[i]` is `4`, we can jump `4` more steps to reach index `6`, so the condition is `i + nums[i] >= r` , then set `r = i`, if reachable, `r` must be 0. 
+
 2. Jump Game II
 
 # Backtrack
