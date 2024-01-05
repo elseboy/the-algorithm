@@ -90,7 +90,9 @@
 
    Use `dp array` to track minimum from smaller to bigger `(bottom up)`, all we need is two loops, first one is coins loop and inner loop is i from coin to amount, take the `min(dp[i], dp[i - coin] + 1)`, and `dp[amount]` is the answer.
 
-3. Coin Change II
+3. Coin Change II:
+
+   Same as `coin change I` , also use `dp[0] * (amount  + 1)` to keep track, the only difference is in this question, we are counting the combinations, so inside of the inner loop, we do ` dp[i] += dp[i - coin] `.
 
 4. Longest Increasing Subsequence:
 
