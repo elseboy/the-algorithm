@@ -146,6 +146,8 @@
 
 2. Jump Game II
 
+   First get the farthest, which is `farthest = max(farthest, i + nums[i])`, then when we reach this `farthest` index, lets say `curr_end`, when `i == curr_end`, we have to reset `curr_end` to the next `farthest` index that we can reach and increases `jumps += 1`. This way can ensure  minimum number of jumps.
+
 # Backtrack
 
 1. Subsets
