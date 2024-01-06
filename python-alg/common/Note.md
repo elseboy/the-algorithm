@@ -182,6 +182,8 @@
 
 4. Reverse Words in a String
 
+   The basic logic is that loop the string backwards, and set `end = len(s)`, then if `s[i] == " "`, this means last word is space, so we set `end = i` or `i == 0 or s[i - 1] == " "`, this ensures that we can check is current word finished, if so, we append like this: `if res: res.append(" ") res.append(s[i:end])`.  Then return `"".join(res)`.
+
 5. Multiply Strings
 
 6. Longest Common Prefix
