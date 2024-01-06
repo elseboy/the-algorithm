@@ -164,6 +164,8 @@
 
 4. Permutations
 
+   It is the same as the previous solution, all we have to do is ensure that `nums[i] not in path` because this will create duplicates.
+
 # String
 
 1. Longest Substring Without Repeating Characters
