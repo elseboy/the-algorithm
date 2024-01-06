@@ -156,6 +156,8 @@
 
 2. Combination Sum
 
+   The basic idea is also use `backtrack`, the only difference is we pass `backtrack(i, target - candidates[i], path)`, this will divide target into smaller. We also need to sort because this can avoiding duplicates.
+
 3. Generate Parentheses
 
 4. Permutations
