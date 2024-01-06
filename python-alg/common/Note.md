@@ -151,8 +151,13 @@
 # Backtrack
 
 1. Subsets
+
+   In `backtrack` function, first copy the current path to res, then compare `start == len(nums)`, if true, return to last loop, otherwise, make a loop, from `start, len(nums)`, in side of the loop, we have to make sure they are not duplicates, so we do `i > start and nums[i] == nums[i - 1]`, if so, just  `continue`, else, we append current i to path `append(nums[i])`, then call `backtrack(i + 1, path)`, and after that, we just  `pop` one unit from the path. Also, we have `sort()` array because this related to duplcates matter first.
+
 2. Combination Sum
+
 3. Generate Parentheses
+
 4. Permutations
 
 # String
