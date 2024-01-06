@@ -174,6 +174,8 @@
 
 2. Longest Palindromic Substring
 
+   The idea is that middle out, define `expand` function to exapnd each index `i`, for exmple, `l - 1, r + 1`, and also we have to check`l >= 0 and r < len(s)` and `s[l] == s[r]` in th while statement, this will ensures that we are getting the longest palindromic index,  when `l - 1 == -1`, this means we can not expand anymore, so we return `l + 1, r - 1`. Then the main logic is loop each element and set `l1, r1 = expand(i , i)` for old number, `l2, r2 = exapnd(i, i + 1)` for the sapce between even numbers. Then check the length, `r1 - l1` or  `r2 - l2` greater than `end - start`, if so, update `start, end`, finally return `s[start:end + 1]`, this is the palindromic.
+
 3. Add Strings
 
 4. Restore IP Addresses
