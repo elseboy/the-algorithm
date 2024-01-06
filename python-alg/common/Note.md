@@ -169,16 +169,29 @@
 # String
 
 1. Longest Substring Without Repeating Characters
+
+   Use set to keep track chars, if found duplicates in set, we use `while` loop to remove it, use while loop because we might encounter issue like `bacab`, then we will have only `c` left, but res is still remained 3,  otherwise, the repeated har will still in set because we are removing char based on `s[count]`, so we have to use while,  then add to set `chars.add(nums[i])`, and update `res = max(res, i - count) + 1`.
+
 2. Longest Palindromic Substring
+
 3. Add Strings
+
 4. Restore IP Addresses
+
 5. String to Integer (atoi)
+
 6. Compare Version Numbers
+
 7. Reverse Words in a String
+
 8. Multiply Strings
+
 9. Longest Common Prefix
+
 10. Group Anagrams	
+
 11. Valid Parentheses
+
 12. Longest Substring Without Repeating Characters
 
 # Linked List
