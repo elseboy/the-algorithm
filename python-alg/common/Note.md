@@ -160,6 +160,8 @@
 
 3. Generate Parentheses
 
+   So the basic idea is that use backtrack, and the `return` statment is when `len(s)` resches `n * 2` because we only can generate `() * n`, if this is true, we append `res` and return. the next thing is we have to set `l, r` to keep track how mang `(` `)` we have currently, so `if l < n` means we need to add more `(`, we call backtrack again: `backtrack(s + "(", l + 1, r)`, if `r < l` means we need more `)` to match the numbers of `(` in our s, so we call `s + ")", l, r + 1`.
+
 4. Permutations
 
 # String
