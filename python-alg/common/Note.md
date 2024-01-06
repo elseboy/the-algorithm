@@ -180,25 +180,19 @@
 
    Loop over both strings and start to do plus from the end, get single `x`, `y`, and set `total = x + y + carry`, then get `carry = total // 10` and `digit = total % 10`, then just insert it, like `res.insert(0, digit)`.
 
-4. Restore IP Addresses
+4. Compare Version Numbers
 
-   Mark
+5. Reverse Words in a String
 
-5. String to Integer (atoi)
+6. Multiply Strings
 
-6. Compare Version Numbers
+7. Longest Common Prefix
 
-7. Reverse Words in a String
+8. Group Anagrams	
 
-8. Multiply Strings
+9. Valid Parentheses
 
-9. Longest Common Prefix
-
-10. Group Anagrams	
-
-11. Valid Parentheses
-
-12. Longest Substring Without Repeating Characters
+10. Longest Substring Without Repeating Characters
 
 # Linked List
 
