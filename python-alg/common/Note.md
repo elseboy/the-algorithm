@@ -178,6 +178,8 @@
 
 3. Add Strings
 
+   Loop over both strings and start to do plus from the end, get single `x`, `y`, and set `total = x + y + carry`, then get `carry = total // 10` and `digit = total % 10`, then just insert it, like `res.insert(0, digit)`.
+
 4. Restore IP Addresses
 
 5. String to Integer (atoi)
