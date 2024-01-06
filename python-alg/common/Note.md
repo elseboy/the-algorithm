@@ -188,9 +188,11 @@
 
    First find the shortest word in array, use this `prefix = min(strs, key=len)`, then loop its length and innner loop is `word in strs`, then check `if prefix[i] != word[i]`, this means we found the different, then just return `prefix[:i]`, otherwise return `prefix` because shortest is also a common prefix.
 
-6. Group Anagrams	
+6. Group Anagrams
 
-7. Valid Parentheses
+   First thing is create a map to stored them, loop them `for s in strs:`, then get sorted key, like this: `key = ''.join(sorted(s))`, so if `key` not in map, then set `map[key] = []`, if already exties in the map, then just append to the list, like this: `map[key].append(s)`, then return all the vlaues as list, like `return list(map.values())`.
+
+   
 
 # Linked List
 
