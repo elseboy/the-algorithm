@@ -184,13 +184,13 @@
 
    The basic logic is that loop the string backwards, and set `end = len(s)`, then if `s[i] == " "`, this means last word is space, so we set `end = i` or `i == 0 or s[i - 1] == " "`, this ensures that we can check is current word finished, if so, we append like this: `if res: res.append(" ") res.append(s[i:end])`.  Then return `"".join(res)`.
 
-5. Multiply Strings
+5. Longest Common Prefix
 
-6. Longest Common Prefix
+   First find the shortest word in array, use this `prefix = min(strs, key=len)`, then loop its length and innner loop is `word in strs`, then check `if prefix[i] != word[i]`, this means we found the different, then just return `prefix[:i]`, otherwise return `prefix` because shortest is also a common prefix.
 
-7. Group Anagrams	
+6. Group Anagrams	
 
-8. Valid Parentheses
+7. Valid Parentheses
 
 # Linked List
 
