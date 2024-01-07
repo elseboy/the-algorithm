@@ -222,6 +222,8 @@
 
 7. Intersection of Two Linked Lists
 
+   PASS
+
 8. Merge k Sorted Lists
 
 9. Reorder List
