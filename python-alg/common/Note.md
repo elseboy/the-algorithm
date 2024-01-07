@@ -218,6 +218,8 @@
 
 6. Linked List Cycle II
 
+   Two pointers, set `fast, slow = head, head`, then `while True:`, `fast, slow = fast.next.next, slow.next`, if there is a cycle, they will meet, then break it `if fast == slow: break`, and reset `fast`, start to loop and  check`while fast != slow`, if they are not equal, then move forward, like`fast = fast.next, slow = slow.next`, if they meet, just return `fast`, this is answer.
+
 7. Intersection of Two Linked Lists
 
 8. Merge k Sorted Lists
