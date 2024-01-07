@@ -15,9 +15,9 @@ def reorder_list(head):
 def find_middle(head):
     slow, fast = head, head
 
-    while fast and fast.next:
-        slow = slow.next
+    while fast.next and fast.next.next:
         fast = fast.next.next
+        slow = slow.next
 
     return slow
 
