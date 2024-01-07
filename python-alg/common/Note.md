@@ -248,6 +248,8 @@
 
 13. Sort List
 
+    Use merge sort, first find middle, then sort left and right, then merge the results ffrom left and right.
+
 14. Add Two Numbers
 
 15. Palindrome Linked List (Space complexity O(1))
