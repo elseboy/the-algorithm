@@ -214,6 +214,8 @@
 
 5. Linked List Cycle I
 
+   PASS
+
 6. Linked List Cycle II
 
 7. Intersection of Two Linked Lists
