@@ -197,19 +197,35 @@
 # Linked List
 
 1. Reverse Linked List I
+
+   PASS
+
 2. Reverse Linked List II
+
 3. Reverse Nodes in k-Group
+
 4. Merge Two Sorted Lists
+
 5. Linked List Cycle I
+
 6. Linked List Cycle II
+
 7. Intersection of Two Linked Lists
+
 8. Merge k Sorted Lists
+
 9. Reorder List
+
 10. Remove Nth Node From End of List
+
 11. Remove Duplicates from Sorted List I
+
 12. Remove Duplicates from Sorted List II
+
 13. Sort List
+
 14. Add Two Numbers
+
 15. Palindrome Linked List (Space complexity O(1))
 
 # Tree
