@@ -256,6 +256,8 @@
 
 15. Palindrome Linked List (Space complexity O(1))
 
+    First thing is find the middle, them reverse the `mid.next`, then compare `head.val != r.val`, this means they are not palindrome, make sure that we loop `while r:` not `head`. This takes O(1) space complexity.
+
 # Tree
 
 1. Binary Tree Level Order Traversal
