@@ -244,6 +244,8 @@
 
 12. Remove Duplicates from Sorted List II
 
+    First create dummy and set `prev = dummy`, then loop `head`, in side of this loop, we also have to check current node's and next node's value: `while head.next and head.val == head.next.val:`, if so, this means they are duplicated, we shift `head = head.next`, this will make sure head on the last duplicates, then check do we need to skip duplicates to connect, like `if prev.next = head:` if so, this means this is no duplicates, because we satrt at `head` and `prev` is always behide one step of `head`, so this means the current node is not the same as previous, if not, then we have to reconnect to head's next because the current head is still one of the duplicates and they told us to clean all the duplciates, so we set `prev.next = head.next`, then we have to shift `head = head.next`. Finally return `dummy.next.`
+
 13. Sort List
 
 14. Add Two Numbers
