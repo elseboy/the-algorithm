@@ -56,6 +56,8 @@
 
     Only need to count the different element, like `[1, 1, 2, 2, 2, 3, 3]`, only increase times when it appears `nums[i] != nums[i + 1]`, the final times is the answer.
 
+14. Remove Duplicates from Sorted Array II:
+
 15. Find First and Last Position of Element in Sorted Array:
 
     Create two functions with binary search method to search the left most and right most, return the index of each index.
