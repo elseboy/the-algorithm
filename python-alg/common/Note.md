@@ -210,6 +210,8 @@
 
 4. Merge Two Sorted Lists
 
+   PASS
+
 5. Linked List Cycle I
 
 6. Linked List Cycle II
