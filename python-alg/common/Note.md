@@ -252,6 +252,8 @@
 
 14. Add Two Numbers
 
+    Bascially, it is the same solution as `AddStrings` problem, create dummy node and set `curr = dummy`, then the loop condition is different, we have to make sure if there is only `l1` or `l2` or `carry` because there might be different length of nodes or carrys. so we do `while l1 or l2 or carray:`, then take `x` and  `y`, just like `AddStrings` problem, then we plus them: `x + y + carry`, and get  `carry = total // 10`, and we create new node, like `curr.next = ListNode(total % 10)`. Then move `l1`,`l2` pointers if they are not empty. and return `dummy.next`.
+
 15. Palindrome Linked List (Space complexity O(1))
 
 # Tree
