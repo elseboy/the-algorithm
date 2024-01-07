@@ -238,6 +238,8 @@
 
 11. Remove Duplicates from Sorted List I
 
+    PASS
+
 12. Remove Duplicates from Sorted List II
 
 13. Sort List
