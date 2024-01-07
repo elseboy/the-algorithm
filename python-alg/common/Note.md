@@ -230,6 +230,8 @@
 
 9. Reorder List
 
+   First find middle, then reverse `mid.next`, then set `mid.next = None`, this will make us have 2 sub lists, then `merge(head, reversed)`.
+
 10. Remove Nth Node From End of List
 
 11. Remove Duplicates from Sorted List I
