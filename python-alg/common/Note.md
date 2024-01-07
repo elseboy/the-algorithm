@@ -234,6 +234,8 @@
 
 10. Remove Nth Node From End of List
 
+    Use two pointers, first create dummy node, and loop `n + 1` to set `fast` to ahead  `slow`, then `while fast` and move both `slow = slow.next` and `fast = fast.next`. Then set `slow.next = slow.next.next`, this means we accors the ith node.
+
 11. Remove Duplicates from Sorted List I
 
 12. Remove Duplicates from Sorted List II
