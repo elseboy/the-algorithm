@@ -226,6 +226,8 @@
 
 8. Merge k Sorted Lists
 
+   Use `Merge Two Sorted Lists` solution, and loop every two nodes from the array, and pass them tp `merge`, define an `array` to collect them, and pass it to `lists = next_level`, make sure `while len(lists) >  1` to run this code again until we have only one element in the `lists[0]`.
+
 9. Reorder List
 
 10. Remove Nth Node From End of List
