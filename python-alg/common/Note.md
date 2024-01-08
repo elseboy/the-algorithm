@@ -329,17 +329,20 @@
 1. Number of Islands
 2. Spiral Matrix
 3. Rotate Image
-4. Maximal Square
 5. Search a 2D Matrix II
 
 # Sliding Window
 
 1. Sliding Window Maximum
-2. Minimum Window Substring
 
 # Others
 
 1. LRU Cache
+
 2. Meeting Room 1
+
+   Overlapping problem.
+
 3. Meeting Room II
-4. Merge Intervals
+
+   Find overlapped tuples. Sort tuple's start and end, put them in different list, then compare, like `if start[i] < end[j]:` this means there is a meeting, we do `count += 1` and `i + 1`, else statement is `count -= 1` and `j += 1`, we have to keep our result like this `res = max(res, count)`.
