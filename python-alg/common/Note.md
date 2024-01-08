@@ -314,6 +314,8 @@
 
 14. Path Sum I
 
+    Use dfs to solve, when reach left and right, like `if not node.left and not node.right:`, then `return curr_sum == target`.
+
 15. Path Sum II
 
 # Stack
