@@ -302,6 +302,8 @@
 
 11. Maximum Depth of Binary Tree
 
+    PASS
+
 12. Balanced Binary Tree
 
 13. Sum Root to Leaf Numbers
