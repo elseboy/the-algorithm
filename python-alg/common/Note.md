@@ -318,6 +318,8 @@
 
 15. Validate Binary Search Tree
 
+    Inorder travel, and set `prev = float('inf')` and  check  `temp.val <= prev:`, if this is true, then the tree is not valid.
+
 16. Path Sum I
 
 17. Path Sum II
