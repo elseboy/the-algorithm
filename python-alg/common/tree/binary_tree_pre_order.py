@@ -23,6 +23,12 @@ def pre_order(root):
             
     return res
 
+#     3
+#    / \
+#   9  20
+#     /  \
+#    15   7
+# pre = [3, 9, 20, 15, 7]
 
 tree = TreeNode(3)
 tree.left = TreeNode(9)

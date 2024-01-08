@@ -21,6 +21,12 @@ def in_order(root):
 
     return res
 
+#     3
+#    / \
+#   9  20
+#     /  \
+#    15   7
+# pre = [9, 3, 15, 20, 7]
 
 tree = TreeNode(3)
 tree.left = TreeNode(9)

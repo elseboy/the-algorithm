@@ -26,6 +26,13 @@ def post_order(root):
     return res
 
 
+#     3
+#    / \
+#   9  20
+#     /  \
+#    15   7
+# pre = [9, 15, 7, 20, 3]
+
 tree = TreeNode(3)
 tree.left = TreeNode(9)
 tree.right = TreeNode(20)
