@@ -278,6 +278,8 @@
 
 5. Lowest Common Ancestor of a Binary Tree
 
+   Recursive to sovle.
+
 6. Binary Tree Zigzag Level Order Traversal
 
 7. Binary Tree Maximum Path Sum
