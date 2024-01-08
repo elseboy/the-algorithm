@@ -316,13 +316,11 @@
 
     Use `bfs`, first append `root.left` and `root.right`, then start to loop, then take `l` and `r` out of `queue`, if one of them is empty or `left.val != right.val`, then return False.
 
-15. Diameter of Binary Tree
+15. Validate Binary Search Tree
 
-16. Validate Binary Search Tree
+16. Path Sum I
 
-17. Path Sum I
-
-18. Path Sum II
+17. Path Sum II
 
 # Stack
 
