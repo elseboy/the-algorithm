@@ -306,6 +306,8 @@
 
 12. Balanced Binary Tree
 
+    Use `dfs` to get `l_height` and `r_height`, then compare them `abs(l_height - r_height) > 1`, if this is true, it means it is not balanced.
+
 13. Sum Root to Leaf Numbers
 
 14. Symmetric Tree
