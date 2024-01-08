@@ -312,13 +312,17 @@
 
     So basically it is the same as level travel, but we need to append like this `queue.append((root, 0))`, this is to track current level sum, the only patteren is  `curr_sum = curr_sum * 10 + node.val`, and when `not node.left and not node.right`, this means the entire level is sum up, so we do  `total += curr_sum`, then move `left` `right` pointers.
 
-14. Diameter of Binary Tree
+14. Symmetric Tree
 
-15. Validate Binary Search Tree
+    Use `bfs`, first append `root.left` and `root.right`, then start to loop, then take `l` and `r` out of `queue`, if one of them is empty or `left.val != right.val`, then return False.
 
-16. Path Sum I
+15. Diameter of Binary Tree
 
-17. Path Sum II
+16. Validate Binary Search Tree
+
+17. Path Sum I
+
+18. Path Sum II
 
 # Stack
 
