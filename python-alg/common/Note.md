@@ -282,6 +282,8 @@
 
 6. Binary Tree Zigzag Level Order Traversal
 
+   `True` and  `False` to control use `popleft` or `pop`.
+
 7. Binary Tree Maximum Path Sum
 
 8. Binary Tree Right Side View
