@@ -290,6 +290,8 @@
 
 8. Binary Tree Right Side View
 
+   Level Travel, take the `deque[-1].val`.
+
 9. Construct Binary Tree from Preorder and Inorder Traversal
 
 10. Binary Tree Preorder Traversal
