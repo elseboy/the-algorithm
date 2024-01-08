@@ -310,6 +310,8 @@
 
 13. Sum Root to Leaf Numbers
 
+    So basically it is the same as level travel, but we need to append like this `queue.append((root, 0))`, this is to track current level sum, the only patteren is  `curr_sum = curr_sum * 10 + node.val`, and when `not node.left and not node.right`, this means the entire level is sum up, so we do  `total += curr_sum`, then move `left` `right` pointers.
+
 14. Symmetric Tree
 
 15. Diameter of Binary Tree
