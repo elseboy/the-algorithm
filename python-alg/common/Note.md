@@ -294,7 +294,11 @@
 
 9. Construct Binary Tree from Preorder and Inorder Traversal
 
-10. Binary Tree Preorder Traversal
+   Mark
+
+10. Construct Binary Tree from Inorder and Postorder Traversal
+
+    Mark
 
 11. Maximum Depth of Binary Tree
 
