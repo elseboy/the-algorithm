@@ -266,6 +266,8 @@
 
 2. Binary Tree Inorder Traversal
 
+   PASS
+
 3. Lowest Common Ancestor of a Binary Tree
 
 4. Binary Tree Zigzag Level Order Traversal
