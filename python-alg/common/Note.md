@@ -292,37 +292,29 @@
 
    Level Travel, take the `deque[-1].val`.
 
-9. Construct Binary Tree from Preorder and Inorder Traversal
+9. Maximum Depth of Binary Tree
 
-   Mark
+   PASS
 
-10. Construct Binary Tree from Inorder and Postorder Traversal
-
-    Mark
-
-11. Maximum Depth of Binary Tree
-
-    PASS
-
-12. Balanced Binary Tree
+10. Balanced Binary Tree
 
     Use `dfs` to get `l_height` and `r_height`, then compare them `abs(l_height - r_height) > 1`, if this is true, it means it is not balanced.
 
-13. Sum Root to Leaf Numbers
+11. Sum Root to Leaf Numbers
 
     So basically it is the same as level travel, but we need to append like this `queue.append((root, 0))`, this is to track current level sum, the only patteren is  `curr_sum = curr_sum * 10 + node.val`, and when `not node.left and not node.right`, this means the entire level is sum up, so we do  `total += curr_sum`, then move `left` `right` pointers.
 
-14. Symmetric Tree
+12. Symmetric Tree
 
     Use `bfs`, first append `root.left` and `root.right`, then start to loop, then take `l` and `r` out of `queue`, if one of them is empty or `left.val != right.val`, then return False.
 
-15. Validate Binary Search Tree
+13. Validate Binary Search Tree
 
     Inorder travel, and set `prev = float('inf')` and  check  `temp.val <= prev:`, if this is true, then the tree is not valid.
 
-16. Path Sum I
+14. Path Sum I
 
-17. Path Sum II
+15. Path Sum II
 
 # Stack
 
