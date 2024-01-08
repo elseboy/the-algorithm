@@ -274,6 +274,8 @@
 
 4. Binary Tree Postorder Traversal
 
+   PASS
+
 5. Lowest Common Ancestor of a Binary Tree
 
 6. Binary Tree Zigzag Level Order Traversal
