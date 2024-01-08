@@ -261,20 +261,37 @@
 # Tree
 
 1. Binary Tree Level Order Traversal
+
+   PASS
+
 2. Binary Tree Inorder Traversal
+
 3. Lowest Common Ancestor of a Binary Tree
+
 4. Binary Tree Zigzag Level Order Traversal
+
 5. Binary Tree Maximum Path Sum
+
 6. Binary Tree Right Side View
+
 7. Construct Binary Tree from Preorder and Inorder Traversal
+
 8. Binary Tree Preorder Traversal
+
 9. Maximum Depth of Binary Tree
+
 10. Balanced Binary Tree
+
 11. Sum Root to Leaf Numbers
+
 12. Symmetric Tree
+
 13. Diameter of Binary Tree
+
 14. Validate Binary Search Tree
+
 15. Path Sum I
+
 16. Path Sum II
 
 # Stack
