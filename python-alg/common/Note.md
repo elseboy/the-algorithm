@@ -437,6 +437,8 @@
 
 4. Search a 2D Matrix II
 
+   Use Binary search
+
 # Sliding Window
 
 1. Sliding Window Maximum
