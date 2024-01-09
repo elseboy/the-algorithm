@@ -338,7 +338,7 @@
 
    First thing is init stack like `stack[-1]`, this way will ensure the correct sum, then use `enumerate` to loop, if `p == '('`, this we an append to `stack`,  we `pop` it otherwise, in `else`, we also have to check `stack` is empty or not, if it is `emoty`, then we append `index` again,  n `else` statment, we use `ma()` to get `i - stack[-1]`.
 
-6. Decode String
+   
 
 # Graph
 
