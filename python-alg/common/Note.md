@@ -332,6 +332,8 @@
 
 4. Min Stack
 
+   Two stacks trick, one is noremal save, another one always saves `min(val, min_stack[-1])`.
+
 5. Longest Valid Parentheses
 
 6. Decode String
