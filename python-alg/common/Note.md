@@ -324,11 +324,15 @@
 
 2. Implement Queue using Stacks
 
-3. Min Stack
+   Two stacks trick.
 
-4. Longest Valid Parentheses
+3. Implement Stack using Queues
 
-5. Decode String
+4. Min Stack
+
+5. Longest Valid Parentheses
+
+6. Decode String
 
 # Graph
 
