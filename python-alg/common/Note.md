@@ -319,9 +319,15 @@
 # Stack
 
 1. Valid Parentheses
+
+   Use `stack` and `dic` to map the pairs, like this: `dic = {"{": "}", "[": "]", "(": ")"}`. Then loop check `c` in `s`.
+
 2. Implement Queue using Stacks
+
 3. Min Stack
+
 4. Longest Valid Parentheses
+
 5. Decode String
 
 # Graph
