@@ -328,6 +328,8 @@
 
 3. Implement Stack using Queues
 
+   Two deques to move elements.
+
 4. Min Stack
 
 5. Longest Valid Parentheses
