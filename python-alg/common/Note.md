@@ -70,7 +70,7 @@
 
 18. Sort an Array:
 
-    Mark
+    PASS
 
 19. Merge Sorted Array
 
