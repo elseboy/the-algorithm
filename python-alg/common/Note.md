@@ -38,7 +38,7 @@
 
 10. Two sum II:
 
-   Also use binary method, compare `arr[l] + arr[r]` with `target`, if smaller than `target`, this means `l` should be bigger and will get `bigger total` compare to the  `target`, `r` should be smaller otherwise, the overall time complexity is `O(n)`.
+    Also use binary method, compare `arr[l] + arr[r]` with `target`, if smaller than `target`, this means `l` should be bigger and will get `bigger total` compare to the  `target`, `r` should be smaller otherwise, the overall time complexity is `O(n)`.
 
 11. Three sum:
 
