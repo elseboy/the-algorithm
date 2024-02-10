@@ -114,10 +114,6 @@
 
    Just simple exclusive the first element and last element, each time call the `House Robber I` solution, then return `max`.
 
-9. Decode Ways:
-
-   So basically there are only two ways that we can decode a input string of numbers. First create `dp = [0] * (n + 1)` the set `dp[0] = 1` because empty string only has one way to decode and set `dp[1] = 0 if s[0] == '0' else 1` because there is no match to the letters string starts at `0`. Then loop from `2, n + 1` and check single number first, if it is single number, it must fit `1 <= int(s[i  - 1]) <= 9` , if this is the case, we simply just  `dp[i] += dp[i - 1]`. another is two digits, `two_digits = int(s[ i - 2:1])`, then check `10 <= two_digits <= 26`, same as previous, we simply just add `dp[i] += dp[i - 2]`.
-
 10. Unique Paths:
 
     Use bottom-up dp to set `dp[i][j] = dp[i + 1][j] + dp[i][j + 1]` because we can only mobe down or right, which means the edges of this martrix will be only 1, we are only computing `m - 2` and `n - 2` when looping backwards.
