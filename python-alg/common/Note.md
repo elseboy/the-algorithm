@@ -118,10 +118,6 @@
 
     Use bottom-up dp to set `dp[i][j] = dp[i + 1][j] + dp[i][j + 1]` because we can only mobe down or right, which means the edges of this martrix will be only 1, we are only computing `m - 2` and `n - 2` when looping backwards.
 
-11. Pascal's Triangle:
-
-    First init matrix `dp` to be rows by rows, then set `dp[0][0] = 1` because there is only `1` number in the first row, the loop the rest and to rows and set the start of each row to be `1` because this can be only `1`, then compute `j` from `1` to `i + 1`, set `dp[i][j] = dp[i - 1][j - 1] + dp[i - 1][j]`, before `+` is the the previous row of  current  `i'` left, the right is `dp[i - 1][j]`, so plus them we can have result for  current `i` position.
-
 12. Edit Distance
 
     Just like Unique paths problem, we also need `dp` with extra layers and set these layers to increaing order from bottom-up, then we loop backwards `i` as `m - 1, -1, -1` and `j` as `n - 1, -1, -1`, if `word1[i] == word2[j]`, then `dp[i][j] = diagonal`，else we have to find min operations, so `dp[i][j] = min(dp[i + 1][j], dp[i][j + 1], dp[i + 1][j + 1]) + 1 `.
