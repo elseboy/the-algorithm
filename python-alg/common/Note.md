@@ -286,10 +286,6 @@
 
    PASS
 
-10. Balanced Binary Tree
-
-    Use `dfs` to get `l_height` and `r_height`, then compare them `abs(l_height - r_height) > 1`, if this is true, it means it is not balanced.
-
 11. Sum Root to Leaf Numbers
 
     So basically it is the same as level travel, but we need to append like this `queue.append((root, 0))`, this is to track current level sum, the only patteren is  `curr_sum = curr_sum * 10 + node.val`, and when `not node.left and not node.right`, this means the entire level is sum up, so we do  `total += curr_sum`, then move `left` `right` pointers.
