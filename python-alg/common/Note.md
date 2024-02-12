@@ -308,14 +308,6 @@
 
    Use `stack` and `dic` to map the pairs, like this: `dic = {"{": "}", "[": "]", "(": ")"}`. Then loop check `c` in `s`.
 
-2. Implement Queue using Stacks
-
-   Two stacks trick.
-
-3. Implement Stack using Queues
-
-   Two deques to move elements.
-
 4. Min Stack
 
    Two stacks trick, one is noremal save, another one always saves `min(val, min_stack[-1])`.
