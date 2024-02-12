@@ -276,7 +276,7 @@
 
 7. Binary Tree Maximum Path Sum
 
-   MARK
+   The basic solution is that recursive call to find `left_sum` and `right_sum`, like this: `left_sum = max(sub_tree_sum(node.left), 0)`, `right_sum = max(sub_tree_sum(node.right), 0)`, then we `node_sum = node.val + left_sum + right_sum`, now we have node sum, we hve to update the `max_sum` like this: `max_sum = max(max_sum, node_sum)`, the most important thing is when we return, we have to decide which side is bigger, we return that side, like this: `return node.val + max(left_sum, right_sum)`. This is the whole `dfs` funciton, we can set `max_sum = float('-inf')` and start to get `sub_tree_sum(root)`, then return `max_sum`.
 
 8. Binary Tree Right Side View
 
